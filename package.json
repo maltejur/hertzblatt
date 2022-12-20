@@ -2,10 +2,10 @@
   "name": "hertzblatt",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build --public-url ./ src/index.html && mkdir -p dist_single && inliner dist/index.html >dist_single/index.html"
   },
   "devDependencies": {
-    "@parcel/transformer-image": "2.0.0-beta.2",
-    "parcel": "^2.0.0-beta.2"
+    "inliner": "^1.13.1",
+    "parcel": "^2.8.2"
   }
 }
